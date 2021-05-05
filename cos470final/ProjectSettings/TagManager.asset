@@ -7,6 +7,7 @@ TagManager:
   - can
   - bottle
   - glass
+  - crate
   layers:
   - Default
   - TransparentFX
