@@ -24,12 +24,10 @@ public class Cans : MonoBehaviour
         Debug.Log("We in the can method");
         if (collider.gameObject.tag == "can") {
             
-            TheLogicAndStuff.GetInstance().score += this.scoreValue;
+            TheLogicAndStuff.GetInstance().cans += 1;
 
-            displayText.text = "SCORE:"+TheLogicAndStuff.GetInstance().score;
+            displayText.text = "Yup, that's a can";
             
-            Debug.Log(TheLogicAndStuff.GetInstance().score);
-            Destroy(collider.gameObject);
         }
     }
 }
