@@ -8,6 +8,7 @@ public class Bottles : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip clip;
     public Text displayText;
+    public Text bottleText;
     public float volume = 0.5f;
     
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class Bottles : MonoBehaviour
     {
         
     }
+
     void OnTriggerEnter(Collider collider)
     {
         Debug.Log("We in the bottle method");
@@ -29,7 +31,7 @@ public class Bottles : MonoBehaviour
             TheLogicAndStuff.GetInstance().bottles += 1;
             Debug.Log(TheLogicAndStuff.GetInstance().bottles);
             displayText.text = "Yup, that's a bottle";
-         
+            bottleText.text = TheLogicAndStuff.GetInstance().bottles + " bottles";
         //    audioSource.PlayOneShot(clip, volume);
             
         }

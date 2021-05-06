@@ -8,6 +8,7 @@ public class Glass : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip clip;
     public Text displayText;
+    public Text glassText;
     public float volume = 0.5f;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class Glass : MonoBehaviour
             TheLogicAndStuff.GetInstance().glass += 1;
             Debug.Log(TheLogicAndStuff.GetInstance().glass);
             displayText.text = "Yup, that's glass";
-         
+            glassText.text = TheLogicAndStuff.GetInstance().glass + " glass";
         //    audioSource.PlayOneShot(clip, volume);
             
         }

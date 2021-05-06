@@ -8,6 +8,7 @@ public class Cans : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip clip;
     public Text displayText;
+    public Text canText;
     public float volume = 0.5f;
 
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class Cans : MonoBehaviour
             TheLogicAndStuff.GetInstance().cans += 1;
             Debug.Log(TheLogicAndStuff.GetInstance().cans);
             displayText.text = "Yup, that's a can";
-         
+            canText.text = TheLogicAndStuff.GetInstance().cans + " cans";
         //    audioSource.PlayOneShot(clip, volume);
             
         }
