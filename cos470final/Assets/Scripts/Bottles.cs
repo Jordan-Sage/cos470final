@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Cans : MonoBehaviour
+public class Bottles : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip clip;
     public Text displayText;
     public float volume = 0.5f;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        // audioSource = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -21,16 +21,14 @@ public class Cans : MonoBehaviour
     {
         
     }
-
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("We in the can method");
-        Debug.Log(collider.gameObject.tag == "can");
-        if (collider.gameObject.tag == "can") {
-            Debug.Log(TheLogicAndStuff.GetInstance().cans);
-            TheLogicAndStuff.GetInstance().cans += 1;
-            Debug.Log(TheLogicAndStuff.GetInstance().cans);
-            displayText.text = "Yup, that's a can";
+        Debug.Log("We in the bottle method");
+        Debug.Log(collider.gameObject.tag == "bottle");
+        if (collider.gameObject.tag == "bottle") {
+            TheLogicAndStuff.GetInstance().bottles += 1;
+            Debug.Log(TheLogicAndStuff.GetInstance().bottles);
+            displayText.text = "Yup, that's a bottle";
          
         //    audioSource.PlayOneShot(clip, volume);
             
