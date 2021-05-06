@@ -18,7 +18,7 @@ public class Dumpsters : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("We in the method");
+        Debug.Log("Dumpster on Trigger method");
         Debug.Log(collider.gameObject.tag == "crate");
         if (collider.gameObject.tag == "crate") {
             

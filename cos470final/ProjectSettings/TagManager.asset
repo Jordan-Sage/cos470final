@@ -8,6 +8,7 @@ TagManager:
   - bottle
   - glass
   - crate
+  - bin
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cans : MonoBehaviour
 {
@@ -22,12 +23,15 @@ public class Cans : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         Debug.Log("We in the can method");
+        Debug.Log(collider.gameObject.tag == "can");
         if (collider.gameObject.tag == "can") {
-            
+            Debug.Log(TheLogicAndStuff.GetInstance().cans);
             TheLogicAndStuff.GetInstance().cans += 1;
-
+            Debug.Log(TheLogicAndStuff.GetInstance().cans);
             displayText.text = "Yup, that's a can";
             
+        } else {
+            Debug.Log(collider.gameObject.tag);
         }
     }
 }
