@@ -26,8 +26,7 @@ public class Dumpsters : MonoBehaviour
             
             Destroy(collider.gameObject);
 
-           Instantiate(theBin, new Vector3(0,0,-4), Quaternion.identity);
-
+            Instantiate(theBin, new Vector3(0,0,-4), Quaternion.Euler(new Vector3(-90,0,0)));
         }
     }
 }
