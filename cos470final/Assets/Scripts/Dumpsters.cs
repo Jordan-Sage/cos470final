@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Dumpsters : MonoBehaviour
 {
+    public GameObject theBin;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,9 @@ public class Dumpsters : MonoBehaviour
         if (collider.gameObject.tag == "crate") {
             
             Destroy(collider.gameObject);
+
+           Instantiate(theBin, new Vector3(0,0,-4), Quaternion.identity);
+
         }
     }
 }
