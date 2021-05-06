@@ -9,6 +9,7 @@ TagManager:
   - glass
   - crate
   - bin
+  - hands
   layers:
   - Default
   - TransparentFX
